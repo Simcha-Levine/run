@@ -33,7 +33,7 @@ Landscape::Landscape(sf::Vector2u winSize)
 void Landscape::setup(TextureLoader *t)
 {
     textures = t;
-    shader.loadFromFile("shaders/parallax.glsl", sf::Shader::Fragment);
+    shader.loadFromFile("assets/shaders/parallax.glsl", sf::Shader::Fragment);
     shader.setUniform("u_resolution", sf::Glsl::Vec2(view.getSize().x, view.getSize().y));
     shader.setUniform("texture", sf::Shader::CurrentTexture);
 

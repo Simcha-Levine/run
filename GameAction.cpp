@@ -13,7 +13,7 @@ GameAction::GameAction(sf::Vector2u winSize)
 void GameAction::setup()
 {
     textures.load();
-    track.buildLevel("level.csv", textures);
+    track.buildLevel("assets/levels/level.csv", textures);
     landscape.setup(&textures);
     player.setup(&textures);
     finishedSetup = true;
