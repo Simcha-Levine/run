@@ -1,10 +1,7 @@
 project('Run', 'cpp', version : '0.1', 
   default_options : ['warning_level=3', 'cpp_std=c++20', 'default_library=static'])
 
-sfml = [dependency('sfml-graphics'),
- dependency('sfml-window'),
-  dependency('sfml-system'),
-  dependency('sfml-audio')]
+sfml = dependency('sfml-graphics')
 
 
 src = [
@@ -22,5 +19,6 @@ src = [
   ]
 
 exe = executable('run', src, install : true, dependencies : [sfml])
+# exe = executable('run', src, install : true, link_with : sfml)
 
 test('basic', exe)

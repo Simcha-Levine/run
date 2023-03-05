@@ -45,7 +45,8 @@ void Player::setAngle(sf::Time deltaTime)
 {
     float difference = getBetweenAngle(movement.angle * 180.f / M_PI, getRotation());
     float o = 0.2f * deltaTime.asMilliseconds();
-    if (compareFloat(difference, 0.f) || compareFloat(difference, 180.f))
+    if (compareFloat(difference, 0.f) || compareFloat(difference, 180.f) ||
+        difference > 90.f || difference < -90.f)
     {
         setRotation(movement.angle * 180.f / M_PI);
     }
